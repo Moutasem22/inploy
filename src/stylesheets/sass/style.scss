@@ -1,0 +1,33 @@
+* {
+	box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
+}
+
+body,
+html {
+	font-family: 'Roboto', sans-serif;
+}
+
+.main__container {
+	width: 90%;
+	margin: auto;
+	max-width: 1200px;
+}
+
+@import './component/mixin', './component/variables', './component/buttons', './component/input';
+
+@import './layout/header';
+@import './layout/form';
+@import './layout/clients';
+@import './layout/contactUs';
+@import './layout/footer';
+@import './layout/cards';

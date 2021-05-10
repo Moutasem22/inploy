@@ -1,0 +1,106 @@
+.form__slider {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	margin-top: 80px;
+	margin-bottom: 202px;
+	
+	@include mq('tablet-wide') {
+		margin-bottom: 25px;
+	}
+
+	@include mq('tablet') {
+		flex-wrap: wrap;
+	}
+
+	.form__schema {
+		display: flex;
+		flex-wrap: wrap;
+		width: 49%;
+
+		@include mq('tablet') {
+			width: 100%;
+		}
+
+		input {
+			width: 47%;
+			height: 40px;
+			padding: 0 13px;
+			margin-bottom: 20px;
+
+			&:nth-child(even) {
+				margin-right: 15px;
+			}
+		}
+
+		.form__schema--header {
+			color: $secondary;
+			font-size: 24px;
+			width: 100%;
+			margin-bottom: 45px;
+			position: relative;
+
+			&::after {
+				content: '';
+				position: absolute;
+				bottom: -18px;
+				left: 0;
+				height: 6px;
+				width: 90px;
+				background-color: $primary;
+			}
+		}
+	}
+
+	.slider {
+		width: 49%;
+		position: relative;
+		@include mq('tablet') {
+			width: 100%;
+			margin-bottom: 25px;
+		}
+		h3 {
+			font-size: 24px;
+			color: $primary;
+			@include mq('tablet') {
+				font-size: 18px;
+			}
+		}
+
+		.cards__wrapper {
+			position: absolute;
+			top: 20px;
+
+			&:first-of-type {
+				transform: scale(0.8);
+				left: -42px;
+				z-index: 3;
+
+				@include mq('tablet-wide') {
+					position: unset;
+					margin: auto;
+				}
+			}
+
+			&:nth-of-type(2) {
+				transform: scale(0.7);
+				left: 17%;
+				z-index: 2;
+
+				@include mq('tablet-wide') {
+					display: none;
+				}
+			}
+
+			&:last-of-type {
+				transform: scale(0.6);
+				left: 39%;
+				z-index: 1;
+
+				@include mq('tablet-wide') {
+					display: none;
+				}
+			}
+		}
+	}
+}

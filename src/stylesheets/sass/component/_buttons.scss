@@ -1,0 +1,22 @@
+button {
+	height: 32px;
+	border-radius: 6px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 12px;
+	border: none;
+    cursor: pointer;
+    min-width: 88px;
+
+	&.primary__btn {
+		background-color: $primary;
+		color: #fff;
+	}
+
+	&.secondary__btn {
+		background-color: $white;
+		color: #20334d;
+		box-shadow: rgba(0, 0, 0, 0.15) 0px 0 5px;
+	}
+}

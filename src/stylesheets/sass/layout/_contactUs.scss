@@ -1,0 +1,164 @@
+.contact__container {
+	padding-top: 100px;
+
+	@include mq('tablet') {
+		padding-top: 30px;
+	}
+
+	.main__container {
+		display: flex;
+
+		@include mq('tablet') {
+			flex-wrap: wrap;
+		}
+	}
+
+	.contact__container--left {
+		width: 49%;
+
+		@include mq('tablet') {
+			width: 100%;
+			margin-bottom: 100px;
+			text-align: center;
+
+			button {
+				margin: auto;
+			}
+		}
+
+		h3 {
+			color: $secondary;
+			font-size: 24px;
+
+			&:last-of-type {
+				text-decoration: underline;
+				margin-bottom: 30px;
+				position: relative;
+
+				&::after {
+					content: '';
+					position: absolute;
+					bottom: -18px;
+					left: 0;
+					height: 6px;
+					width: 90px;
+					background-color: $primary;
+
+					@include mq('tablet') {
+						right: 35%;
+						left: 35%;
+						width: auto;
+					}
+				}
+			}
+		}
+
+		> p {
+			font-size: 17px;
+			color: #1f324e;
+
+			&:first-of-type {
+				margin-bottom: 20px;
+				margin-top: 30px;
+			}
+
+			&:last-of-type {
+				font-weight: bold;
+				margin-bottom: 30px;
+			}
+		}
+	}
+
+	.contact__container--right {
+		width: 59%;
+		background-size: 100% 100%;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-image: url(../../images/labtop.png);
+		position: relative;
+
+		@include mq('tablet') {
+			width: 100%;
+			background-image: none;
+		}
+
+		.badge {
+			display: block;
+			text-align: center;
+			margin-top: -82px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			@include mq('tablet') {
+				img {
+					width: 100px;
+				}
+			}
+		}
+
+		.contact__mail {
+			display: flex;
+			align-items: center;
+			padding: 10px;
+			background: $primary;
+			border-radius: 30px;
+			margin: auto;
+			justify-content: space-around;
+
+			span {
+				color: $white;
+				font-size: 12px;
+			}
+		}
+
+		.contact__social {
+			display: flex;
+			align-items: center;
+			padding: 5px;
+			background: $white;
+			border-radius: 30px;
+			margin: auto;
+			margin-top: 20px;
+			justify-content: center;
+			box-shadow: rgba(0, 0, 0, 0.15) 0px 0 5px;
+
+			span {
+				width: 25px;
+				height: 25px;
+				border-radius: 50%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				background: #20334d;
+				margin-right: 6px;
+				color: #fff;
+				font-size: 12px;
+			}
+		}
+
+		.card__social--wrapper {
+			display: flex;
+			align-items: center;
+
+			@include mq('tablet') {
+				flex-direction: column-reverse;
+				margin-top: 30px;
+			}
+
+			.cards__wrapper {
+				transform: scale(0.7);
+				margin-left: -100px;
+
+				@include mq('tablet') {
+					margin-left: 0;
+				}
+
+				.card__social--right {
+					flex-shrink: 0;
+					width: 44%;
+				}
+			}
+		}
+	}
+}
